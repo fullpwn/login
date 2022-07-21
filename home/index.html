@@ -39,9 +39,9 @@ html{
     </div>
     <script>
 let searchParams = new URLSearchParams(window.location.search)
-searchParams.has('token') 
-let token = searchParams.get('token')
-let dec_token = atob(token)
+searchParams.has('session') 
+let session = searchParams.get('session')
+let dec_token = atob(session)
 document.getElementById("details").innerHTML = (dec_token) ;
 
     </script>

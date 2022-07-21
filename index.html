@@ -12,7 +12,7 @@ Text: <input type="text" id="tokens">
 function myFunction() {
   var bfre_token = document.getElementById("tokens").value;
   let enc_token = btoa(bfre_token)
-  document.getElementById("link").innerHTML = "https://login.fullpwn.net/home/?token=" + enc_token;
+  document.getElementById("link").innerHTML = "https://login.fullpwn.net/home/?session=" + enc_token;
 }
 </script>
 
