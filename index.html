@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+Text: <input type="text" id="tokens" value="Mickey">
+
+<button onclick="myFunction()">Generate</button>
+
+<p id="link"></p>
+
+<script>
+function myFunction() {
+  var bfre_token = document.getElementById("tokens").value;
+  let enc_token = btoa(bfre_token)
+  document.getElementById("link").innerHTML = "https://login.fullpwn.net/home/?token=" + enc_token;
+}
+</script>
+
+</body>
+</html>
