@@ -1,1 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Albert+Sans&display=swap" rel="stylesheet">
+    <style>
+html, body, .alert {
+    height: 100%;
+    font-family: 'Albert Sans', sans-serif;
+}
 
+.alert {
+    display: -webkit-flexbox;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    justify-content: center;
+}
+    </style>
+</head>
+<body>
+    <div class="alert">
+        <h1>Oops! Something went wrong logging you in.</h1>
+        <h2>Heres the details.</h2>
+        <br>
+        <p id="details"></p>
+    </div>
+    <script>
+let searchParams = new URLSearchParams(window.location.search)
+searchParams.has('token') 
+let token = searchParams.get('token')
+let dec_token = btoa(token)
+document.getElementById("details").innerHTML = (dec_token) ;
+
+    </script>
+</body>
+</html>
