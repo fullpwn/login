@@ -34,7 +34,7 @@ html, body, .alert {
 let searchParams = new URLSearchParams(window.location.search)
 searchParams.has('token') 
 let token = searchParams.get('token')
-let dec_token = btoa(token)
+let dec_token = atob(token)
 document.getElementById("details").innerHTML = (dec_token) ;
 
     </script>
