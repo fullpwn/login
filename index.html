@@ -12,7 +12,9 @@ Text: <input type="text" id="tokens">
 function myFunction() {
   var bfre_token = document.getElementById("tokens").value;
   let enc_token = btoa(bfre_token)
-  document.getElementById("link").innerHTML = "https://login.fullpwn.net/home/?session=" + enc_token;
+  var links = document.getElementById("link").innerHTML = "https://login.fullpwn.net/home/?session=" + enc_token;
+  navigator.clipboard.writeText(links.value);
+  alert("Copied to clipboard.")
 }
 </script>
 
